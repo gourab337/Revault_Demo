@@ -1,0 +1,46 @@
+﻿Notes:
+
+
+stakeholder1: *xpriv* *xpub* *noise key*
+stakeholder2: *xpriv* *xpub* *noise key*
+manager1: *xpriv* *xpub* *noise key*
+cosigner1: *029ae5f2eaf1bda43f7bb19eb5792086c6084ae1d4f2aa842702d083381474792e* *11d7f2115448347a1e8cb39c77492df30cb8bdfa53910ed3b8fe9da1180a7073*
+cosigner2: *0353afb92bb82ce367e054b31ef760408fbc564cdc7d1d55d818ea0b31a06acac6* *770bbf5a9ccc1ac8b3a612cc5b17503090b5ea5255045ccf40e346375abf7775*
+coordinator: *noise key*
+
+
+Template: 
+
+
+stakeholder1: *xpriv* *xpub* *noise key*
+stakeholder2: *xpriv* *xpub* *noise key*
+manager1: *xpriv* *xpub* *noise key*
+cosigner1: *bitcoin pubkey* *noise key*
+cosigner2: *bitcoin pubkey* *noise key*
+coordinator: *noise key*
+
+
+—--------------------------------------------------------------
+
+
+Running `target/debug/cosignerd --conf cosigner_1_config.toml`
+
+
+
+
+[2022-03-06][20:57:20][cosignerd::keys][INFO] No Noise private key at '"/Users/gourab337/Desktop/revault_tutorial/cosignerd/cosignerd_1_data/noise_secret"', generating a new one
+[2022-03-06][20:57:20][cosignerd::database][INFO] No database at "/Users/gourab337/Desktop/revault_tutorial/cosignerd/cosignerd_1_data/cosignerd.sqlite3", creating a new one.
+[2022-03-06][20:57:20][cosignerd][INFO] Started cosignerd daemon with Noise pubkey '11d7f2115448347a1e8cb39c77492df30cb8bdfa53910ed3b8fe9da1180a7073' and Bitcoin pubkey '029ae5f2eaf1bda43f7bb19eb5792086c6084ae1d4f2aa842702d083381474792e'
+
+
+
+
+Running `target/debug/cosignerd --conf cosigner_2_config.toml`
+
+
+[2022-03-06][23:58:11][cosignerd::keys][INFO] No Noise private key at '"/Users/gourab337/Desktop/revault_tutorial/cosignerd/cosignerd_2_data/noise_secret"', generating a new one
+[2022-03-06][23:58:11][cosignerd::database][INFO] No database at "/Users/gourab337/Desktop/revault_tutorial/cosignerd/cosignerd_2_data/cosignerd.sqlite3", creating a new one.
+[2022-03-06][23:58:11][cosignerd][INFO] Started cosignerd daemon with Noise pubkey '770bbf5a9ccc1ac8b3a612cc5b17503090b5ea5255045ccf40e346375abf7775' and Bitcoin pubkey '0353afb92bb82ce367e054b31ef760408fbc564cdc7d1d55d818ea0b31a06acac6'
+
+
+—---------------------------------------------------------------------------------------------------
